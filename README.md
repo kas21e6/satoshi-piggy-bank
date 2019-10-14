@@ -6,7 +6,9 @@ I tweeted [this](https://twitter.com/kiltonred/status/1180359423727783936) somet
 >
 >Watching their savings grow over the long haul would help kids develop low time preference
 
-Then I decided to build it myself. I didn't build a hardware wallet, but a little device that can monitor how many satoshis a given bitcoin address has and the current US dollar value of those satoshis.
+Then I decided to build it myself. I didn't build a hardware wallet, but a little device that can monitor how many satoshis a given bitcoin address has and the current US dollar value of those satoshis. More details on why I built this [here](https://www.reddit.com/r/Bitcoin/comments/dgzzxp/i_made_a_satoshis_piggy_bank_for_my_son/).
+
+---
 
 ![Side view](./images/side.png)
 
@@ -19,7 +21,9 @@ The rest of this document is a tutorial on how to build one of these.
 Before we get too deep into this tutorial, let's set some expectations. I'm expecting that you:
 
 * Already have a bitcoin address that you want to monitor (it can be a segwit or a legacy address)
-* You are comfortable with using the terminal app (or willing to learn)
+* Are comfortable with using the terminal app (or willing to learn)
+
+---
 
 Let's get started.
 
