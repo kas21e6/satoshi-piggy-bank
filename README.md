@@ -1,4 +1,4 @@
-# A Satoshi Piggy Bank Tutorial 🐷
+# How to Build a Satoshi Piggy Bank with Raspberry Pi 🐷
 
 I tweeted [this](https://twitter.com/kiltonred/status/1180359423727783936) sometime ago:
 
@@ -6,7 +6,7 @@ I tweeted [this](https://twitter.com/kiltonred/status/1180359423727783936) somet
 >
 >Watching their savings grow over the long haul would help kids develop low time preference
 
-Then I decided to build it myself. I didn't build a hardware wallet, but a little device that can monitor how many satoshis a given bitcoin address has and the current US dollar value of those satoshis. More details on why I built this [here](https://www.reddit.com/r/Bitcoin/comments/dgzzxp/i_made_a_satoshis_piggy_bank_for_my_son/).
+Then I decided to build it myself. I didn't build a hardware wallet, but a little device that can monitor how many satoshis a given bitcoin address has and the current US dollar value of those satoshis. See [this Reddit post](https://www.reddit.com/r/Bitcoin/comments/dgzzxp/i_made_a_satoshis_piggy_bank_for_my_son/) for more details.
 
 ---
 
@@ -43,11 +43,11 @@ You'll need a microSD card with at least 8GB of storage. If you have one lying a
 
 This is the tiny screen where the satoshi balance and dollar value will be displayed.
 
-It's a Chinese knock-off of the out-of-stock [Adafruit PiOLED - 128x32 Monochrome OLED Add-on for Raspberry Pi](https://www.adafruit.com/product/3527)
+It's a knock-off of the out-of-stock [Adafruit PiOLED - 128x32 Monochrome OLED Add-on for Raspberry Pi](https://www.adafruit.com/product/3527)
 
 #### [Soldering iron kit](https://www.amazon.com/gp/product/B07PDK3MX1) ($10)
 
-Did you see the little pins that are sticking out of the Pi in the picture? These come as a separate part of the Pi kit. You'll need to solder them onto the Pi before you can plug-in the display.
+Did you notice the little pins that are sticking out of the Pi in the picture? These come as a separate part of the Pi kit. You'll need to solder them onto the Pi before you can plug-in the display.
 
 This soldering kit comes with soldering wire, which you'll learn how to use.
 
@@ -71,13 +71,13 @@ Once you have your Pi and soldering kits, you can get started by soldering the p
 
 ## Installing the operating system on the Pi 💻
 
-When you receive your Pi, it'll be a brick without any operating system. The first thing you'll need to do is install the operating system. [This YouTube video tutorial](https://www.youtube.com/watch?v=GJDIgS8nres) shows how:
+When you receive your Pi, it'll be a brick without any software. The first thing you'll need to do is install the operating system. [This YouTube video tutorial](https://www.youtube.com/watch?v=GJDIgS8nres) shows how:
 
 [![Raspberry Pi soldering](https://img.youtube.com/vi/GJDIgS8nres/0.jpg)](https://www.youtube.com/watch?v=GJDIgS8nres)
 
 ## Put the Pi in the case 🥧
 
-Now that you're done with soldering and you have the microSD card inserted in the Pi, you can put the Pi inside the clear case.
+Now that you're done with soldering and you have the microSD card inserted into the Pi, you can put the Pi inside the clear case.
 
 Use the case parts that will have windows for the pins on both sides.
 
@@ -101,15 +101,15 @@ Enter the commands that you see in the _**"Update Your Pi and Python"**_ section
 
 ### Enable the I2C thingamajig
 
-For the tiny screen and Pi to be able to talk to each other, you need the I2C thing enabled. To enable it follow [this guide](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c).
+For the tiny screen and Pi to be able to talk to each other, the I2C thing has to be enabled. To enable it follow [this guide](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c).
 
-After going through the guide above, you can enter the command below to see if things are working
+After going through the guide above, enter the command below to see if things are working
 
 ```bash
 sudo i2cdetect -y 0
 ```
 
-If a number shows up in the grid that means your Pi can now see the connected screen!
+If a number shows up in the grid that means your Pi is now seeing the connected screen!
 
 ### Keep installing stuff
 
@@ -129,7 +129,7 @@ If the above two commands complete without errors, you're good! 👍
 
 ## Run the Python script 🐍
 
-Now you're ready to start running Python code that can display things on the screen.
+Now you're ready to start running Python code to display things on the screen.
 
 Download the code using `git clone` by entering this command
 
@@ -147,7 +147,7 @@ Hopefully you're now seeing the satoshis and dollar value on the screen?
 
 ### Options for the Python script
 
-In the above command, you can see values such as ` 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp`. You can replace this address with your own. And you can replace any of the other options, too.
+In the above command, you can see values such as `1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp`. Replace this address with your own. You can replace any of the other options, too.
 
 The options are:
 
@@ -158,13 +158,13 @@ Name|Default|Description
 `--lineheight`|`20`|How far away the lines are<br>from each other
 `--refreshrate`|`3600` (in seconds)|How often the numbers<br>are updated
 
-You can re-run the command above with different options to see which configurations you like.
+Re-run the command above with different options to find the configurations you like the most.
 
 ## Run the `piggy-bank.py` script on start-up
 
 You don't want to run this command manually every time you plug-in your Pi. You want it to run automatically.
 
-To make that happen, you'll need to edit the file called `/etc/rc.local`. If you're new to editing files using the terminal, [watch this tutorial](https://www.youtube.com/watch?v=boD-opv0fMs).
+To make that happen, edit the file called `/etc/rc.local`. If you're new to editing files using the terminal, [watch this tutorial](https://www.youtube.com/watch?v=boD-opv0fMs).
 
 To get started, enter
 
