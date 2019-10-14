@@ -153,10 +153,10 @@ The options are:
 
 Name|Default|Description
 -|-|-
-`--address`|`1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp`<br>(Some address I found online)|The Bitcoin<br>address to track
-`--fontsize`|`14`|How big the font<br>on the screen is
-`--lineheight`|`20`|How far away the<br>lines are from each other
-`--refreshrate`|`3600` (in seconds)|How often the<br>numbers are updated
+`--address`|`1dice8EMZ...`|The Bitcoin address to track
+`--fontsize`|`14`|How big the font on the screen is
+`--lineheight`|`20`|How far away the lines are<br>from each other
+`--refreshrate`|`3600` (in seconds)|How often the numbers<br>are updated
 
 You can re-run the command above with different options to see which configurations you like.
 
