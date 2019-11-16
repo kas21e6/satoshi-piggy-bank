@@ -140,7 +140,7 @@ git clone https://github.com/kiltonred/satoshi-piggy-bank.git
 Run the code
 
 ```bash
-sudo python3 ./satoshi-piggy-bank/piggy-bank.py --address 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp --fontsize 11 --lineheight 20 --refreshrate 3600
+sudo python3 ./satoshi-piggy-bank/code/piggy-bank.py --address 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp --fontsize 11 --lineheight 20 --refreshrate 3600
 ```
 
 Hopefully you're now seeing the satoshis and dollar value on the screen?
@@ -198,7 +198,7 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 
-sudo python3 /home/pi/satoshi-piggy-bank/piggy-bank.py --address 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp --fontsize 14 --lineheight 20 --refreshrate 3600
+sudo python3 /home/pi/satoshi-piggy-bank/code/piggy-bank.py --address 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp --fontsize 14 --lineheight 20 --refreshrate 3600
 
 exit 0
 ```
